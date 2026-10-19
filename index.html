@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101216" />
+  <meta name="description" content="A tiny campus adventure for curious minds. Pick a quest, explore a little, and keep your curiosity moving." />
+  <title>Foxtrail — Find your next little adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Foxtrail home"><span class="brand-mark">f<span>.</span></span><span class="brand-name">foxtrail</span></a>
+      <div class="side-label">YOUR SPACE</div>
+      <nav class="main-nav">
+        <a class="nav-link active" href="#home"><span class="nav-icon">◈</span> Discover <span class="nav-dot"></span></a>
+        <a class="nav-link" href="#quests"><span class="nav-icon">⌁</span> My quests <span class="nav-count" id="nav-count">0</span></a>
+        <a class="nav-link" href="#map"><span class="nav-icon">⌖</span> Campus map</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="tiny-card"><div class="tiny-orb">✳</div><div><b>A little every day.</b><span>Your next idea is closer than you think.</span></div></div>
+        <div class="profile"><div class="avatar">✦</div><div class="profile-copy"><b>Curious explorer</b><span>Level 01 · New here</span></div><button class="more-btn" aria-label="More options">···</button></div>
+      </div>
+    </aside>
+
+    <main class="main" id="home">
+      <header class="topbar"><div class="breadcrumb">THE CAMPUS <span>/</span> <b>YOUR NEXT ADVENTURE</b></div><div class="top-actions"><span class="live-pill"><i></i> All systems curious</span><button class="help-button" id="help-button" aria-label="About Foxtrail">?</button></div></header>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-line"></span> A SMALL ADVENTURE STARTS HERE</div>
+          <h1 id="hero-title">Find your next<br /><span>little adventure.</span></h1>
+          <p>Good things happen when you follow your curiosity.<br class="desktop-break" /> Pick a quest and see where it takes you.</p>
+          <a class="primary-button" href="#quests">Explore the quests <span>↗</span></a>
+          <div class="hero-note"><span class="sparkle">✳</span> No pressure. Just progress.</div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of a glowing fox walking a winding campus path" role="img">
+          <div class="art-glow"></div><div class="art-sun"></div>
+          <svg class="art-landscape" viewBox="0 0 650 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 236C111 201 172 220 263 208C375 194 470 135 650 170V360H0V236Z" fill="#242936"/>
+            <path d="M0 285C115 241 194 269 288 247C400 220 526 182 650 219V360H0V285Z" fill="#323744"/>
+            <path d="M207 360C251 300 274 300 324 263C372 227 395 211 455 199C502 190 537 171 560 149" stroke="#D8A76F" stroke-width="28" stroke-linecap="round" opacity=".48"/>
+            <path d="M207 360C251 300 274 300 324 263C372 227 395 211 455 199C502 190 537 171 560 149" stroke="#E7BB8D" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 12" opacity=".72"/>
+            <path d="M25 231L48 177L70 231H25Z" fill="#454D60"/><path d="M15 232H80" stroke="#6B7180" stroke-width="4"/><path d="M37 186V222M51 178V222M64 198V222" stroke="#20242D" stroke-width="3"/>
+            <path d="M118 218L146 152L175 218H118Z" fill="#50586A"/><path d="M108 219H185" stroke="#777F8E" stroke-width="4"/><path d="M133 174V208M146 161V208M160 187V208" stroke="#272B35" stroke-width="3"/>
+            <rect x="458" y="121" width="80" height="70" rx="3" fill="#4C5363"/><path d="M447 124L498 95L549 124H447Z" fill="#6A7180"/><path d="M476 151H488V174H476V151ZM504 151H516V174H504V151ZM486 122H499V138H486V122Z" fill="#D19A69"/>
+            <circle cx="81" cy="280" r="23" fill="#586856"/><circle cx="80" cy="265" r="17" fill="#687C65"/><path d="M80 282V312" stroke="#685749" stroke-width="5"/>
+            <circle cx="591" cy="239" r="27" fill="#536652"/><circle cx="592" cy="220" r="19" fill="#70836B"/><path d="M592 240V272" stroke="#685749" stroke-width="6"/>
+            <circle cx="384" cy="285" r="2" fill="#F4C592"/><circle cx="420" cy="249" r="2" fill="#F4C592"/><circle cx="295" cy="317" r="2" fill="#F4C592"/><circle cx="544" cy="256" r="2" fill="#F4C592"/>
+          </svg>
+          <div class="fox-badge"><span>✦</span> FOLLOW THE GLOW</div>
+          <div class="art-caption"><span class="caption-pin">⌖</span><span><b>Somewhere on campus</b><small>Every corner has a story.</small></span></div>
+          <div class="art-scribble">take<br />the scenic<br />route <span>↘</span></div>
+        </div>
+        <div class="hero-index"><span>01</span><span class="index-line"></span><span>03</span></div>
+      </section>
+
+      <section class="stats-row" aria-label="Your progress"><div class="stat"><span class="stat-icon orange">✳</span><div><b id="points">0</b><small>curiosity points</small></div></div><div class="stat"><span class="stat-icon yellow">◷</span><div><b id="minutes">0 <em>min</em></b><small>time well spent</small></div></div><div class="stat"><span class="stat-icon green">⌁</span><div><b id="completed">0</b><small>quests completed</small></div></div><div class="stat-message"><span>✦</span> Your story is just getting started.</div></section>
+
+      <section class="quests-section" id="quests">
+        <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> PICK UP WHEREVER</div><h2>A quest for your curiosity.</h2></div><button class="view-all" id="shuffle-button">Surprise me <span>↻</span></button></div>
+        <div class="filter-row" role="group" aria-label="Filter quests"><button class="filter-chip selected" data-filter="all">All quests <span>04</span></button><button class="filter-chip" data-filter="creative">Creative</button><button class="filter-chip" data-filter="social">Social</button><button class="filter-chip" data-filter="explore">Explore</button><div class="filter-spacer"></div><span class="quest-hint">PICK ONE. MAKE IT YOURS.</span></div>
+        <div class="quest-grid" id="quest-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="map-strip" id="map"><div class="map-icon">⌖</div><div class="map-copy"><span>THERE'S MORE OUT THERE</span><b>The campus is your playground.</b><small>Little discoveries are hiding in every corner.</small></div><button id="map-button" class="map-button">Take a look <span>↗</span></button><div class="map-decoration">✳</div></section>
+      <footer><a class="footer-brand" href="#home">foxtrail<span>.</span></a><span>Made for the curious. <i>✦</i></span><a href="#home">BACK TO THE TOP ↑</a></footer>
+    </main>
+  </div>
+
+  <dialog id="quest-dialog" class="quest-dialog"><button class="dialog-close" aria-label="Close">×</button><div id="dialog-content"></div></dialog>
+  <dialog id="info-dialog" class="info-dialog"><button class="dialog-close" aria-label="Close">×</button><div class="dialog-spark">✳</div><div class="eyebrow">A NOTE FROM THE TRAIL</div><h2>Curiosity looks<br />good on you.</h2><p>Foxtrail is a little interactive campus adventure. Pick a quest, follow your curiosity, and collect a few points along the way. Progress stays right here in your browser.</p><button class="primary-button" id="got-it">Sounds good <span>↗</span></button></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
